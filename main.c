@@ -3,20 +3,15 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) 
+int main(void)
 {
-	int i = 10;
-	char c = 'a';
+	int i = 4;
+	char c = 'A';
 	
-	int * iptr; //정수형 포인터 변수 iptr 선언
-	iptr = &i; //포인터 iptr이 i를 가리키게 함
-	char * cptr; //문자형 포인터 변수 cptr 선언
-	cptr = &c; //cptr이 c를 가리키게 함
-	int * iptr2; //정수형 포인터 변수 iptr2 선언
-	iptr2 = iptr; //iptr2가 iptr이 가리키는 곳을 동일하게 가리키게 함 
+	int *pi = &i;
+	char *pc = &c;
 	
-	printf("i : %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
-	printf("c : %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
-	printf("iptr2 : %p, %i\n", iptr2, *iptr2);
+	printf("%i, %i, %c, %c\n", i, *pi, c, *pc);
+
 	return 0;
 }
